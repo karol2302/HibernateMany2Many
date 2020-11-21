@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection settings -->
+        <property name="hibernate.connection.driver_class">net.sourceforge.jtds.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:jtds:sqlserver://KAROL-KOMPUTER:1433;instance=SQLEXPRESS;DatabaseName=usersdb;</property>
+
+        <property name="hibernate.connection.username">MyLogin</property>
+        <property name="hibernate.connection.password">123</property>
+
+        <property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
+        <property name="hibernate.show_sql">false</property>
+        <property name="hibernate.connection.autocommit">false</property>
+        <property name="hibernate.format_sql">true</property>
+        <property name="hibernate.temp.use_jdbc_metadata_defaults">false</property>
+
+        <mapping class="com.example.hibernate.User"/>
+        <mapping class="com.example.hibernate.Group"/>
+
+    </session-factory>
+</hibernate-configuration>
